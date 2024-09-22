@@ -18,7 +18,7 @@ return {
 				"pyright",
 				"tailwindcss",
 				"rust_analyzer",
-				"glslls",
+				--"glslls",
 				"jsonls",
 				"grammarly",
 				"ast_grep",

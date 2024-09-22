@@ -16,7 +16,8 @@ map("n", "<C-Down>", ":resize +2<CR>")
 map("n", "<C-Left>", ":vertical resize -2<CR>")
 map("n", "<C-Right>", ":vertical resize +2<CR>")
 
-map("n", "<C-s>", ":w<CR>")
+map("n", "<C-s>s", ":w<CR>")
+map("n", "<C-s>", ":noautocmd w<CR>")
 map("n", "<C-g>", ":Telescope find_files<CR>")
 
 -- Visual Block --
@@ -24,14 +25,11 @@ map("n", "<C-g>", ":Telescope find_files<CR>")
 map("x", "J", ":m '>+1<CR>gv=gv")
 map("x", "K", ":m '<-2<CR>gv=gv")
 
--- New Windows
-map("n", "<C-o>", "<CMD>vsplit<CR>")
+-- New Window and Find file
+map("n", "<C-n>", "<CMD>vsplit<BAR>:Telescope find_files<CR>")
 
 -- NeoTree
 map("n", "<C-b>", ":NvimTreeToggle<CR>")
 
--- Create a new file
--- map("n", "<C-n>", ":e ")
-
 -- Close current file
-map("n", "<C-w>", "<CMD>q<CR>")
+map("n", "<C-w>w", "<CMD>q<CR>")
