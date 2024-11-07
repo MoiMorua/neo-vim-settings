@@ -27,6 +27,8 @@ return {
 			--vim.api.nvim_buf_set_keymap(bufnr, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
 			vim.api.nvim_buf_set_keymap(bufnr, "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
 			vim.api.nvim_buf_set_keymap(bufnr, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
+      vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', vim.lsp.buf.hover, opts)
+      vim.api.nvim_buf_set_keymap(bufnr, { 'n', 'i' }, '<C-K>', vim.lsp.buf.signature_help, opts)
 		end
 
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
